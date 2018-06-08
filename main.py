@@ -32,6 +32,10 @@ graph = tf.get_default_graph()
 def index():
     return render_template('index.html')
 
+@app.route('/existing')
+def exist():
+	return render_template('existing.html')
+
 def gen(camera):
     while True:
         frame = camera.get_frame()
